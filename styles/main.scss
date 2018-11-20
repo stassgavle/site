@@ -1,7 +1,44 @@
 @import 'partials/normalize';
 
-$primary-color: #000;
+$primary-color: #36373A;
+$secondary-color: #F3F3F3;
+$misc-color: #4B3629;
+
+$body-text-color: $primary-color;
+$hero-text-color: $secondary-color;
+$hero-background-color: $misc-color;
+
+
+
 
 body {
-  color: $primary-color;
+  color: $body-text-color;
+}
+
+.content-wrapper {
+  z-index: 1;
+}
+
+#hero-image {
+  margin: 0;
+  img {
+    width: 200%;
+    margin-left: -50%;
+  }
+
+  @media only screen and (min-width: 600px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-image: url("../images/header-hero-store.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $hero-background-color;
+    img { display: none; }
+  }
+
 }
