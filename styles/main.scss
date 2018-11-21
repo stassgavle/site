@@ -120,6 +120,7 @@ body {
 #main-menu {
   display: none;
   position: fixed;
+  overflow: scroll;
 }
 
 #menu-toggle-checkbox:checked ~ #main-menu {
