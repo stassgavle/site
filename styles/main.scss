@@ -30,12 +30,92 @@ body {
   line-height: $base-line-height;
 }
 
-.content-wrapper {
+.header-content-wrapper {
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#company-logo {
+  width: 60%;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.header-text-wrapper {
+  padding: 0 1em;
+  margin: 2em 0;
+}
+
+#main-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+
+  label {
+    cursor: pointer;
+    padding: 0 0.2em;
+    position: relative;
+    // z-index: 2;
+    font-size: 40px;
+
+  }
+}
+
+#menu-toggle-checkbox { display: none; }
+
+#menu-toggle-checkbox:checked + label .toggle-burger { display: none; }
+
+#menu-toggle-checkbox:checked ~
+#main-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 10%;
+  bottom: 0;
+  background-color: $primary-color;
+
+  a {
+    text-decoration: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: $bold-weight;
+    &:hover {
+      background-color: rgba(white, 0.1);
+    }
+    &:visited {
+      color: $secondary-color;
+    }
+  }
+}
+
+#main-menu {
+  display: none;
+  position: fixed;
+  label {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .toggle-close {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-top: -0.2em;
+    color: $secondary-color;
+    padding: 0 0.1em;
+    }
 }
 
 #hero-image {
   margin: 0;
+  max-width: 100%;
+  overflow: hidden;
   img {
     width: 200%;
     margin-left: -50%;

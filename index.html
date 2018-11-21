@@ -10,22 +10,26 @@
 </head>
 <body>
   <header role="banner">
-    <div class="content-wrapper">
-      <div class="logo-container">
-          <img id="company-logo" src="images/logos/logo-stass-black.svg" alt="Stass logotyp">
+    <div class="header-content-wrapper">
+      <img id="company-logo" src="images/logos/logo-stass-black.svg" alt="Stass logotyp">
+      <div class="header-text-wrapper">
+        <h1>Gävles mest genomtänkta klädbutik</h1>
+        <p>Här hittar du ett noga utvalt sortiment av <strong>vardagslyxiga kläder</strong> till både kvinnor och män. Välkommen in till oss på andra våningen i Flanörgallerian.</p>
       </div>
-      <h1>Gävles mest genomtänkta klädbutik</h1>
-      <h2>Här hittar du ett noga utvalt sortiment av vardagslyxiga kläder till både kvinnor och män. Välkommen in till oss på andra våningen i Flanörgallerian.</h2>
 
-      <nav role="navigation" id="main-navigation">
-        <ul>
-          <li>Våra Märken</li>
-          <li>Öppettider</li>
-          <li>Hitta till oss</li>
-          <li>Kontakt</li>
-        </ul>
-      </nav>
     </div>
+    <nav role="navigation" id="main-navigation">
+      <input type="checkbox" id="menu-toggle-checkbox">
+      <label for="menu-toggle-checkbox"><span class="toggle-burger">&#9776;</span></label>
+      <div id="main-menu">
+        <label for="menu-toggle-checkbox"><span class="toggle-close">&times;</span></label>
+
+        <a href="#">Våra Märken</a>
+        <a href="#">Öppettider</a>
+        <a href="#">Hitta till oss</a>
+        <a href="#">Kontakt</a>
+      </div>
+    </nav>
     <figure id="hero-image">
       <img src="images/header-hero-store.jpg" alt="Stass - Butiken">
     </figure>
