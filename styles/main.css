@@ -339,6 +339,7 @@ template {
 
 h1, h2, h3 {
   font-family: "Alice", serif;
+  font-weight: 300;
 }
 
 body {
