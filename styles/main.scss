@@ -37,6 +37,14 @@ body {
   line-height: $base-line-height;
 }
 
+header[role="banner"]{
+
+  @media only screen and (min-width: $mobile-break) {
+    min-height: 100vh;
+  }
+
+}
+
 .header-content-wrapper {
   z-index: 1;
   position: relative;

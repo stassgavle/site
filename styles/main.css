@@ -357,6 +357,12 @@ body {
   line-height: 1.3;
 }
 
+@media only screen and (min-width: 600px) {
+  header[role=banner] {
+    min-height: 100vh;
+  }
+}
+
 .header-content-wrapper {
   z-index: 1;
   position: relative;
