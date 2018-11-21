@@ -2,7 +2,7 @@
 
 
 $mobile-break: 600px;
-$tablet-break: 1000px;
+$tablet-break: 900px;
 
 $primary-color: #36373A;
 $secondary-color: #F3F3F3;
@@ -101,6 +101,9 @@ body {
   left: 0;
   text-align: left;
   z-index: 2;
+  @media only screen and (min-width: $tablet-break) {
+    position: relative;
+  }
 }
 
 #burger-toggle {
@@ -110,6 +113,9 @@ body {
   font-size: 40px;
   @media only screen and (min-width: $mobile-break) {
     color: $secondary-color;
+  }
+  @media only screen and (min-width: $tablet-break) {
+    display: none;
   }
 }
 
@@ -121,19 +127,6 @@ body {
   display: none;
   position: fixed;
   overflow: scroll;
-}
-
-#menu-toggle-checkbox:checked ~ #main-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 2em 0;
-  text-align: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 500px;
-  background-color: rgba($primary-color, 0.97);
 
   a {
     text-decoration: none;
@@ -147,15 +140,40 @@ body {
       color: $secondary-color;
     }
   }
+
+  @media only screen and (min-width: $tablet-break) {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 2em;
+
+    a { padding: 1em; }
+  }
 }
 
-
+#menu-toggle-checkbox:checked ~ #main-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba($primary-color, 0.97);
+}
 
 #cross-toggle {
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
+  @media only screen and (min-width: $tablet-break) {
+    display: none;
+  }
 }
+
 .cross-character {
   display: inline-block;
   font-size: 1.5em;
@@ -187,6 +205,10 @@ body {
     background-position: center;
     background-color: $hero-background-color;
     img { display: none; }
+  }
+
+  @media only screen and (min-width: $tablet-break) {
+    min-height: 1000px;
   }
 
 }

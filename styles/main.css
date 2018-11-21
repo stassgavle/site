@@ -420,6 +420,11 @@ body {
   text-align: left;
   z-index: 2;
 }
+@media only screen and (min-width: 900px) {
+  #main-navigation {
+    position: relative;
+  }
+}
 
 #burger-toggle {
   cursor: pointer;
@@ -430,6 +435,11 @@ body {
 @media only screen and (min-width: 600px) {
   #burger-toggle {
     color: #F3F3F3;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #burger-toggle {
+    display: none;
   }
 }
 
@@ -446,6 +456,29 @@ body {
   position: fixed;
   overflow: scroll;
 }
+#main-menu a {
+  text-decoration: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 400;
+}
+#main-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#main-menu a:visited {
+  color: #F3F3F3;
+}
+@media only screen and (min-width: 900px) {
+  #main-menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 2em;
+  }
+  #main-menu a {
+    padding: 1em;
+  }
+}
 
 #menu-toggle-checkbox:checked ~ #main-menu {
   display: flex;
@@ -459,23 +492,17 @@ body {
   max-width: 500px;
   background-color: rgba(54, 55, 58, 0.97);
 }
-#menu-toggle-checkbox:checked ~ #main-menu a {
-  text-decoration: none;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-weight: 400;
-}
-#menu-toggle-checkbox:checked ~ #main-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-#menu-toggle-checkbox:checked ~ #main-menu a:visited {
-  color: #F3F3F3;
-}
 
 #cross-toggle {
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
+}
+@media only screen and (min-width: 900px) {
+  #cross-toggle {
+    display: none;
+  }
 }
 
 .cross-character {
@@ -512,6 +539,11 @@ body {
   }
   #hero-image img {
     display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #hero-image {
+    min-height: 1000px;
   }
 }
 
