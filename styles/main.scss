@@ -1,5 +1,9 @@
 @import 'partials/normalize';
 
+
+$mobile-break: 600px;
+$tablet-break: 1000px;
+
 $primary-color: #36373A;
 $secondary-color: #F3F3F3;
 $misc-color: #4B3629;
@@ -32,21 +36,60 @@ body {
 
 .header-content-wrapper {
   z-index: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  @media only screen and (min-width: $mobile-break) {
+
+  }
 }
 
 #company-logo {
-  width: 60%;
-  max-width: 200px;
-  margin-top: 10px;
+  width: 70%;
+  max-width: 250px;
+  margin-top: 100px;
+  height: auto;
+  path { fill: $primary-color; }
+
+  @media only screen and (min-width: $mobile-break) {
+    display: none;
+  }
+
 }
 
-.header-text-wrapper {
+#company-logo-bold {
+  display: none;
+  width: 70%;
+  max-width: 300px;
+  // margin-top: 100px;
+  height: auto;
+  path { fill: $secondary-color; }
+
+  @media only screen and (min-width: $mobile-break) {
+    display: block;
+  }
+
+}
+
+.hero-text-wrapper {
   padding: 0 1em;
   margin: 2em 0;
+
+  h1 {
+    max-width: 11em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: $mobile-break) {
+    color: $secondary-color;
+    margin-top: 30vh;
+    background-color: rgba(black, 0.6);
+    max-width: 700px;
+  }
 }
 
 #main-navigation {
@@ -54,32 +97,39 @@ body {
   top: 0;
   left: 0;
   text-align: left;
+  z-index: 2;
+}
 
-  label {
-    cursor: pointer;
-    padding: 0 0.2em;
-    position: relative;
-    // z-index: 2;
-    font-size: 40px;
-
+#burger-toggle {
+  cursor: pointer;
+  padding: 0 0.2em;
+  position: relative;
+  font-size: 40px;
+  @media only screen and (min-width: $mobile-break) {
+    color: $secondary-color;
   }
 }
 
 #menu-toggle-checkbox { display: none; }
 
-#menu-toggle-checkbox:checked + label .toggle-burger { display: none; }
+#menu-toggle-checkbox:checked + #burger-toggle { display: none; }
 
-#menu-toggle-checkbox:checked ~
 #main-menu {
+  display: none;
+  position: fixed;
+}
+
+#menu-toggle-checkbox:checked ~ #main-menu {
   display: flex;
   flex-direction: column;
   padding: 2em 0;
   text-align: center;
   top: 0;
   left: 0;
-  right: 10%;
   bottom: 0;
-  background-color: $primary-color;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba($primary-color, 0.97);
 
   a {
     text-decoration: none;
@@ -95,21 +145,19 @@ body {
   }
 }
 
-#main-menu {
-  display: none;
-  position: fixed;
-  label {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .toggle-close {
-    display: inline-block;
-    font-size: 1.5em;
-    margin-top: -0.2em;
-    color: $secondary-color;
-    padding: 0 0.1em;
-    }
+
+
+#cross-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cross-character {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-top: -0.2em;
+  color: $secondary-color;
+  padding: 0 0.1em;
 }
 
 #hero-image {
@@ -121,13 +169,14 @@ body {
     margin-left: -50%;
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $mobile-break) {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 0;
+    min-height: 800px;
     background-image: url("../images/header-hero-store.jpg");
     background-repeat: no-repeat;
     background-size: cover;

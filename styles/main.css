@@ -358,21 +358,58 @@ body {
 
 .header-content-wrapper {
   z-index: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 #company-logo {
-  width: 60%;
-  max-width: 200px;
-  margin-top: 10px;
+  width: 70%;
+  max-width: 250px;
+  margin-top: 100px;
+  height: auto;
+}
+#company-logo path {
+  fill: #36373A;
+}
+@media only screen and (min-width: 600px) {
+  #company-logo {
+    display: none;
+  }
 }
 
-.header-text-wrapper {
+#company-logo-bold {
+  display: none;
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+}
+#company-logo-bold path {
+  fill: #F3F3F3;
+}
+@media only screen and (min-width: 600px) {
+  #company-logo-bold {
+    display: block;
+  }
+}
+
+.hero-text-wrapper {
   padding: 0 1em;
   margin: 2em 0;
+}
+.hero-text-wrapper h1 {
+  max-width: 11em;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 600px) {
+  .hero-text-wrapper {
+    color: #F3F3F3;
+    margin-top: 30vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 700px;
+  }
 }
 
 #main-navigation {
@@ -380,20 +417,32 @@ body {
   top: 0;
   left: 0;
   text-align: left;
+  z-index: 2;
 }
-#main-navigation label {
+
+#burger-toggle {
   cursor: pointer;
   padding: 0 0.2em;
   position: relative;
   font-size: 40px;
+}
+@media only screen and (min-width: 600px) {
+  #burger-toggle {
+    color: #F3F3F3;
+  }
 }
 
 #menu-toggle-checkbox {
   display: none;
 }
 
-#menu-toggle-checkbox:checked + label .toggle-burger {
+#menu-toggle-checkbox:checked + #burger-toggle {
   display: none;
+}
+
+#main-menu {
+  display: none;
+  position: fixed;
 }
 
 #menu-toggle-checkbox:checked ~ #main-menu {
@@ -403,9 +452,10 @@ body {
   text-align: center;
   top: 0;
   left: 0;
-  right: 10%;
   bottom: 0;
-  background-color: #36373A;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(54, 55, 58, 0.97);
 }
 #menu-toggle-checkbox:checked ~ #main-menu a {
   text-decoration: none;
@@ -420,16 +470,13 @@ body {
   color: #F3F3F3;
 }
 
-#main-menu {
-  display: none;
-  position: fixed;
-}
-#main-menu label {
+#cross-toggle {
   position: absolute;
   top: 0;
   right: 0;
 }
-#main-menu .toggle-close {
+
+.cross-character {
   display: inline-block;
   font-size: 1.5em;
   margin-top: -0.2em;
@@ -454,6 +501,7 @@ body {
     left: 0;
     right: 0;
     z-index: 0;
+    min-height: 800px;
     background-image: url("../images/header-hero-store.jpg");
     background-repeat: no-repeat;
     background-size: cover;
