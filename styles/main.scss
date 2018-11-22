@@ -3,6 +3,7 @@
 
 $mobile-break: 600px;
 $tablet-break: 900px;
+$hd-break: 1200px;
 
 $primary-color: #36373A;
 $secondary-color: #F3F3F3;
@@ -20,6 +21,11 @@ $base-weight: 300;
 
 $base-font-size: 26px;
 $base-line-height: 1.3;
+
+$heading-width: 400px;
+$description-width: 600px;
+
+$section-gutter: 10vw;
 
 h1, h2, h3 {
   font-family: $heading-font-family;
@@ -71,7 +77,6 @@ header[role="banner"]{
   display: none;
   width: 70%;
   max-width: 300px;
-  // margin-top: 100px;
   height: auto;
   path { fill: $secondary-color; }
 
@@ -215,4 +220,74 @@ header[role="banner"]{
     min-height: 1000px;
   }
 
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: $section-gutter
+}
+
+.showcase-text-wrapper {
+  width: 90vw;
+  p { max-width: $description-width; }
+  @media only screen and (min-width: $hd-break) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.showcase-wrapper {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+
+  // progressive enhancement with css-grid
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas:
+    'primary   primary   primary   primary'
+    'primary   primary   primary   primary'
+    'secondary secondary secondary secondary'
+    'secondary secondary secondary secondary'
+    'secondary secondary secondary secondary'
+    'misc-one  misc-one  misc-two  misc-two'
+    'misc-one  misc-one  misc-two  misc-two'
+    'tertiary  tertiary  tertiary  tertiary'
+    'tertiary  tertiary  tertiary  tertiary'
+    'tertiary  tertiary  tertiary  tertiary';
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: calc(90vw / 4);
+  & > *:nth-child(1) { grid-area: primary}
+  & > *:nth-child(2) { grid-area: secondary}
+  & > *:nth-child(3) { grid-area: misc-one}
+  & > *:nth-child(4) { grid-area: misc-two}
+  & > *:nth-child(5) { grid-area: tertiary}
+  & > * { overflow: hidden; }
+
+  @media only screen and (min-width: $hd-break) {
+
+    grid-template-areas:
+    'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
+    'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
+    'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
+    'primary  primary  primary  primary  primary  primary  primary  primary   tertiary  tertiary  tertiary  tertiary'
+    'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
+    'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
+    'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary';
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: calc(90vw / 12);
+    img:nth-child(1) { grid-area: primary}
+    img:nth-child(2) { grid-area: secondary}
+    img:nth-child(3) { grid-area: misc-one}
+    img:nth-child(4) { grid-area: misc-two}
+    img:nth-child(5) { grid-area: tertiary}
+  }
+
+
+  img {
+    object-fit: cover;
+  }
 }
