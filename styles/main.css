@@ -405,6 +405,7 @@ body {
 .hero-text-container {
   padding: 0 1em;
   margin: 2em 0;
+  max-width: 700px;
 }
 .hero-text-container h1 {
   max-width: 11em;
@@ -416,7 +417,6 @@ body {
     color: #F3F3F3;
     margin-top: 30vh;
     background-color: rgba(0, 0, 0, 0.6);
-    max-width: 700px;
   }
 }
 
