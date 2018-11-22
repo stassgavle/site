@@ -51,7 +51,7 @@ header[role="banner"]{
 
 }
 
-.header-content-wrapper {
+.header-content-container {
   z-index: 1;
   position: relative;
   display: flex;
@@ -86,7 +86,7 @@ header[role="banner"]{
 
 }
 
-.hero-text-wrapper {
+.hero-text-container {
   padding: 0 1em;
   margin: 2em 0;
 
@@ -229,7 +229,7 @@ header[role="banner"]{
   margin-top: $section-gutter
 }
 
-.showcase-text-wrapper {
+.showcase-text-container {
   width: 90vw;
   p { max-width: $description-width; }
   @media only screen and (min-width: $hd-break) {
@@ -238,7 +238,7 @@ header[role="banner"]{
   }
 }
 
-.showcase-wrapper {
+.showcase-container {
   width: 90vw;
   display: flex;
   flex-direction: column;
