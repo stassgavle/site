@@ -279,11 +279,6 @@ header[role="banner"]{
     'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary';
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: calc(90vw / 12);
-    img:nth-child(1) { grid-area: primary}
-    img:nth-child(2) { grid-area: secondary}
-    img:nth-child(3) { grid-area: misc-one}
-    img:nth-child(4) { grid-area: misc-two}
-    img:nth-child(5) { grid-area: tertiary}
   }
 
 

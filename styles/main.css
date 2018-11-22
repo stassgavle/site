@@ -609,21 +609,6 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: calc(90vw / 12);
   }
-  .showcase-wrapper img:nth-child(1) {
-    grid-area: primary;
-  }
-  .showcase-wrapper img:nth-child(2) {
-    grid-area: secondary;
-  }
-  .showcase-wrapper img:nth-child(3) {
-    grid-area: misc-one;
-  }
-  .showcase-wrapper img:nth-child(4) {
-    grid-area: misc-two;
-  }
-  .showcase-wrapper img:nth-child(5) {
-    grid-area: tertiary;
-  }
 }
 .showcase-wrapper img {
   object-fit: cover;
