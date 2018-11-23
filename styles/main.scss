@@ -8,11 +8,12 @@ $hd-break: 1200px;
 
 $primary-color: #36373A;
 $secondary-color: #F3F3F3;
-$misc-color: #4B3629;
+$misc-color-brown: #4B3629;
+$misc-color-black: #343333;
 
 $body-text-color: $primary-color;
 $hero-text-color: $secondary-color;
-$hero-background-color: $misc-color;
+$hero-background-color: $misc-color-brown;
 
 $heading-font-family: 'Alice', serif;
 $body-font-family: 'Lato', sans-serif;
@@ -35,6 +36,9 @@ $content-max-width: 1400px;
 $section-gutter: 10vw;
 $max-section-text-width: 700px;
 $max-section-header-width: 11em;
+
+@import 'partials/ribbon';  // needs variables declared
+
 
 h1, h2, h3 {
   font-family: $heading-font-family;
@@ -306,11 +310,11 @@ header[role="banner"]{
 }
 
 #brands {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: $section-gutter;
+  z-index: 1;
 
   @media only screen and (min-width: $tablet-break) {
     background-image: url("../images/background-wood.jpg");
@@ -326,13 +330,36 @@ header[role="banner"]{
   padding-top: $section-gutter / 2;
   padding-bottom: $section-gutter / 2;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
+
+  .ribbon { display: none;}
 
   @media only screen and (min-width: $tablet-break) {
     @include content-restraints;
     background-color: #fff;
     box-shadow: 0 0 2px;
+
+    .ribbon { display: block; }
+    .ribbon-top-left {
+      transform: scale(0.7);
+      transform-origin: top left;
+    }
+    .ribbon-bottom-right {
+      transform: scale(0.7);
+      transform-origin: bottom right;
+    }
+  }
+
+  @media only screen and (min-width: $hd-break) {
+    .ribbon-top-left {
+      transform: none;
+    }
+    .ribbon-bottom-right {
+      transform: none;
+    }
   }
 }
 

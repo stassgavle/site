@@ -337,6 +337,90 @@ template {
   display: none;
 }
 
+/* common */
+.ribbon {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 2px solid #010000;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 800px;
+  padding: 25px 0;
+  background-color: #343333;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+/* top left*/
+.ribbon-top-left {
+  top: -4px;
+  left: -4px;
+}
+
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+
+.ribbon-top-left span {
+  right: -170px;
+  top: 170px;
+  transform: rotate(-45deg);
+}
+
+/* bottom right*/
+.ribbon-bottom-right {
+  bottom: -4px;
+  right: -4px;
+}
+
+.ribbon-bottom-right::before,
+.ribbon-bottom-right::after {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.ribbon-bottom-right::before {
+  bottom: 0;
+  left: 0;
+}
+
+.ribbon-bottom-right::after {
+  top: 0;
+  right: 0;
+}
+
+.ribbon-bottom-right span {
+  left: -170px;
+  bottom: 170px;
+  transform: rotate(-225deg);
+}
+
 h1, h2, h3 {
   font-family: "Alice", serif;
   font-weight: 300;
@@ -627,6 +711,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 10vw;
+  z-index: 1;
 }
 @media only screen and (min-width: 900px) {
   #brands {
@@ -643,8 +728,13 @@ body {
   padding-top: 5vw;
   padding-bottom: 5vw;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
+}
+#brands-content-container .ribbon {
+  display: none;
 }
 @media only screen and (min-width: 900px) {
   #brands-content-container {
@@ -652,6 +742,25 @@ body {
     max-width: 1400px;
     background-color: #fff;
     box-shadow: 0 0 2px;
+  }
+  #brands-content-container .ribbon {
+    display: block;
+  }
+  #brands-content-container .ribbon-top-left {
+    transform: scale(0.7);
+    transform-origin: top left;
+  }
+  #brands-content-container .ribbon-bottom-right {
+    transform: scale(0.7);
+    transform-origin: bottom right;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #brands-content-container .ribbon-top-left {
+    transform: none;
+  }
+  #brands-content-container .ribbon-bottom-right {
+    transform: none;
   }
 }
 
