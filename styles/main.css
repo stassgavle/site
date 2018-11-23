@@ -563,6 +563,7 @@ body {
 
 .showcase-text-container {
   width: 90vw;
+  max-width: 1400px;
 }
 .showcase-text-container p {
   max-width: 600px;
@@ -576,6 +577,7 @@ body {
 
 .showcase-container {
   width: 90vw;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   display: grid;
@@ -605,9 +607,15 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .showcase-container {
+    max-height: 816.6666666667px;
     grid-template-areas: "primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary" "primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary" "primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary" "primary  primary  primary  primary  primary  primary  primary  primary   tertiary  tertiary  tertiary  tertiary" "misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary" "misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary" "misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary";
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: calc(90vw / 12);
+    grid-auto-rows: minmax(calc(90vw / 12), 75px);
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 1555.5555555556px) {
+  .showcase-container {
+    grid-template-rows: repeat(7, calc(1400px / 12));
   }
 }
 .showcase-container img {
@@ -623,6 +631,7 @@ body {
 
 #brands-content-container {
   width: 90vw;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   align-items: center;

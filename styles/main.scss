@@ -1,4 +1,5 @@
 @import 'partials/normalize';
+@import 'modules/utilities';
 
 
 $mobile-break: 600px;
@@ -26,6 +27,11 @@ $heading-width: 400px;
 $description-width: 600px;
 
 $content-width: 90vw;
+$content-max-width: 1400px;
+@mixin content-restraints {
+  width: $content-width;
+  max-width: $content-max-width;
+}
 $section-gutter: 10vw;
 $max-section-text-width: 700px;
 $max-section-header-width: 11em;
@@ -233,7 +239,7 @@ header[role="banner"]{
 }
 
 .showcase-text-container {
-  width: $content-width;
+  @include content-restraints;
   p { max-width: $description-width; }
   @media only screen and (min-width: $hd-break) {
     display: flex;
@@ -242,7 +248,7 @@ header[role="banner"]{
 }
 
 .showcase-container {
-  width: $content-width;
+  @include content-restraints;
   display: flex;
   flex-direction: column;
 
@@ -269,11 +275,14 @@ header[role="banner"]{
   & > * { overflow: hidden; }
 
   // set up square cells (1:1 aspect ratio)
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: calc(90vw / 4);
+  $showcase-grid-columns: 4;
+  grid-template-columns: repeat($showcase-grid-columns, 1fr);
+  grid-auto-rows: calc(#{$content-width} / #{$showcase-grid-columns});
 
   @media only screen and (min-width: $hd-break) {
-
+    $showcase-grid-columns: 12;
+    $showcase-grid-rows: 7;
+    max-height: $content-max-width / $showcase-grid-columns * $showcase-grid-rows;
     grid-template-areas:
     'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
     'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
@@ -282,9 +291,16 @@ header[role="banner"]{
     'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
     'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
     'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary';
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: calc(90vw / 12);
+    grid-template-columns: repeat($showcase-grid-columns, 1fr);
+    grid-auto-rows: minmax(calc(#{$content-width} / #{$showcase-grid-columns}), 75px);
+
+    // set exact grid row height (to maintain 1:1 cell aspect ratio) when content reaches max width
+    // media query is nested since max-content-width shouldn't ever be set to exceed previous breakpoints
+    @media only screen and (min-width: $content-max-width / (strip-unit($content-width)/100)) {
+      grid-template-rows: repeat(7, calc(#{$content-max-width} / 12));
+    }
   }
+
 
   img { object-fit: cover; }
 }
@@ -297,7 +313,7 @@ header[role="banner"]{
 }
 
 #brands-content-container {
-  width: $content-width;
+  @include content-restraints;
   display: flex;
   flex-direction: column;
   align-items: center;
