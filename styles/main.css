@@ -628,13 +628,31 @@ body {
   align-items: center;
   margin-top: 10vw;
 }
+@media only screen and (min-width: 900px) {
+  #brands {
+    background-image: url("../images/background-wood.jpg");
+    background-size: cover;
+  }
+}
 
 #brands-content-container {
   width: 90vw;
   max-width: 1400px;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (min-width: 900px) {
+  #brands-content-container {
+    width: 90vw;
+    max-width: 1400px;
+    background-color: #fff;
+    box-shadow: 0 0 2px;
+  }
 }
 
 .brands-text-container {
@@ -658,6 +676,16 @@ body {
   align-items: center;
   justify-items: center;
 }
+@media only screen and (min-width: 900px) {
+  .brands-logo-container {
+    width: 700px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .brands-logo-container {
+    width: inherit;
+  }
+}
 
 .brand-logo {
   width: 37.5%;
@@ -669,6 +697,34 @@ body {
   padding: 7.5% 0 7.5% 7.5%;
 }
 @media screen and (min-width: 600px) {
+  .brand-logo {
+    width: calc(80%/3);
+  }
+  .brand-logo:nth-child(3n+1) {
+    padding: calc(20% / 4) calc(20% / 4) calc(20% / 4) 0;
+  }
+  .brand-logo:nth-child(3n+2) {
+    padding: calc(20% / 4);
+  }
+  .brand-logo:nth-child(3n+3) {
+    padding: calc(20% / 4) 0 calc(20% / 4) calc(20% / 4);
+  }
+}
+@media screen and (min-width: 900px) {
+  .brand-logo {
+    width: calc(70%/3);
+  }
+  .brand-logo:nth-child(3n+1) {
+    padding: calc(30% / 4) calc(30% / 4) calc(30% / 4) 0;
+  }
+  .brand-logo:nth-child(3n+2) {
+    padding: calc(30% / 4);
+  }
+  .brand-logo:nth-child(3n+3) {
+    padding: calc(30% / 4) 0 calc(30% / 4) calc(30% / 4);
+  }
+}
+@media screen and (min-width: 1200px) {
   .brand-logo {
     width: calc(80%/3);
   }
