@@ -327,8 +327,8 @@ header[role="banner"]{
 
   margin-top: $section-gutter;
   margin-bottom: $section-gutter;
-  padding-top: $section-gutter / 2;
-  padding-bottom: $section-gutter / 2;
+  padding-top: $section-gutter;
+  padding-bottom: $section-gutter;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -360,6 +360,24 @@ header[role="banner"]{
     .ribbon-bottom-right {
       transform: none;
     }
+  }
+}
+
+.ribbon-logo {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @media only screen and (min-width: $tablet-break) {
+    display: block;
+    right: 1%;
+    bottom: 1%;
+  }
+  @media only screen and (min-width: $hd-break) {
+    right: 3.5%;
+    bottom: 3.5%;
+    transform: scale(1.2);
   }
 }
 

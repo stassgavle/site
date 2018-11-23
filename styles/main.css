@@ -725,8 +725,8 @@ body {
   max-width: 1400px;
   margin-top: 10vw;
   margin-bottom: 10vw;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -761,6 +761,27 @@ body {
   }
   #brands-content-container .ribbon-bottom-right {
     transform: none;
+  }
+}
+
+.ribbon-logo {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media only screen and (min-width: 900px) {
+  .ribbon-logo {
+    display: block;
+    right: 1%;
+    bottom: 1%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ribbon-logo {
+    right: 3.5%;
+    bottom: 3.5%;
+    transform: scale(1.2);
   }
 }
 
