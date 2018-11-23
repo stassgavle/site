@@ -288,3 +288,50 @@ header[role="banner"]{
 
   img { object-fit: cover; }
 }
+
+#brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: $section-gutter
+}
+
+#brands-content-container {
+  width: $content-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brands-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: $max-section-text-width;
+  align-items: center;
+
+  h2 { max-width: $max-section-header-width; }
+}
+
+.brands-logo-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.brand-logo {
+  width: 37.5%;
+  &:nth-child(2n + 1) { padding: 7.5% 7.5% 7.5% 0; }
+  &:nth-child(2n + 2) { padding: 7.5% 0 7.5% 7.5%; }
+  @media screen and (min-width: $mobile-break) {
+    width: calc(80%/3);
+    &:nth-child(3n + 1) { padding: calc(20% / 4) calc(20% / 4) calc(20% / 4) 0; }
+    &:nth-child(3n + 2) { padding: calc(20% / 4); }
+    &:nth-child(3n + 3) { padding: calc(20% / 4) 0 calc(20% / 4) calc(20% / 4); }
+  }
+}

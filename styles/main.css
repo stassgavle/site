@@ -614,4 +614,64 @@ body {
   object-fit: cover;
 }
 
+#brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vw;
+}
+
+#brands-content-container {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brands-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 700px;
+  align-items: center;
+}
+.brands-text-container h2 {
+  max-width: 11em;
+}
+
+.brands-logo-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.brand-logo {
+  width: 37.5%;
+}
+.brand-logo:nth-child(2n+1) {
+  padding: 7.5% 7.5% 7.5% 0;
+}
+.brand-logo:nth-child(2n+2) {
+  padding: 7.5% 0 7.5% 7.5%;
+}
+@media screen and (min-width: 600px) {
+  .brand-logo {
+    width: calc(80%/3);
+  }
+  .brand-logo:nth-child(3n+1) {
+    padding: calc(20% / 4) calc(20% / 4) calc(20% / 4) 0;
+  }
+  .brand-logo:nth-child(3n+2) {
+    padding: calc(20% / 4);
+  }
+  .brand-logo:nth-child(3n+3) {
+    padding: calc(20% / 4) 0 calc(20% / 4) calc(20% / 4);
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
