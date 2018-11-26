@@ -1180,5 +1180,8 @@ footer[role=contentinfo] {
 #copy-info a {
   color: #F3F3F3;
 }
+#copy-info a:hover {
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=main.css.map */
