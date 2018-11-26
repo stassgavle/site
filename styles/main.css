@@ -625,17 +625,19 @@ header[role=banner] {
   }
 }
 
-#menu-toggle-checkbox:checked ~ #main-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 2em 0;
-  text-align: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 500px;
-  background-color: rgba(54, 55, 58, 0.97);
+@media only screen and (max-width: 900px) {
+  #menu-toggle-checkbox:checked ~ #main-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(54, 55, 58, 0.97);
+  }
 }
 
 #cross-toggle {
