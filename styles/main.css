@@ -426,10 +426,6 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
-body {
-  font-family: "Nunito", sans-serif;
-}
-
 h1 {
   font-size: 40px;
 }
@@ -447,6 +443,7 @@ strong {
 }
 
 body {
+  font-family: "Nunito", sans-serif;
   color: #36373A;
   font-size: 26px;
   font-weight: 300;

@@ -44,7 +44,6 @@ h1, h2, h3 {
   font-family: $heading-font-family;
   font-weight: $base-weight;
 }
-body { font-family: $body-font-family; }
 
 h1 { font-size: 40px; }
 h2 { margin: 0 0 0.5em 0; }
@@ -52,6 +51,7 @@ p { margin-top: 0; }
 strong { font-weight: 800; }
 
 body {
+  font-family: $body-font-family;
   color: $body-text-color;
   font-size: $base-font-size;
   font-weight: $base-weight;
