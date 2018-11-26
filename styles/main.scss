@@ -59,6 +59,7 @@ body {
 }
 
 header[role="banner"]{
+  position: relative;
 
   @media only screen and (min-width: $mobile-break) {
     min-height: 1000px;
@@ -241,7 +242,10 @@ header[role="banner"]{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: $section-gutter
+  margin-top: $section-gutter * 2;
+  @media only screen and (min-width: $tablet-break) {
+    margin-top: $section-gutter;
+  }
 }
 
 .showcase-text-container {
@@ -315,11 +319,12 @@ header[role="banner"]{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: $section-gutter;
+  margin-top: $section-gutter * 2;
   z-index: 1;
 
   @media only screen and (min-width: $tablet-break) {
-    background-image: url("../images/background-wood.jpg");
+  margin-top: $section-gutter;
+  background-image: url("../images/background-wood.jpg");
     background-size: cover;
     background-position: bottom left;
     box-shadow: 0 0 1px 5px black;
@@ -329,10 +334,6 @@ header[role="banner"]{
 #brands-content-container {
   @include content-restraints;
 
-  margin-top: $section-gutter;
-  margin-bottom: $section-gutter;
-  padding-top: $section-gutter;
-  padding-bottom: $section-gutter;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -345,6 +346,10 @@ header[role="banner"]{
     background-color: #fff;
     box-shadow: 0 0 2px;
     border-radius: 3px;
+    margin-top: $section-gutter;
+    margin-bottom: $section-gutter;
+    padding-top: $section-gutter;
+    padding-bottom: $section-gutter;
 
     .ribbon { display: block; }
     .ribbon-top-left {
