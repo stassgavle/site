@@ -1008,7 +1008,7 @@ header[role=banner] {
   }
 }
 
-#map-container {
+#map {
   width: 100%;
   height: 400vw;
   margin-top: -10vw;
@@ -1019,21 +1019,21 @@ header[role=banner] {
   background-size: 450%;
 }
 @media screen and (min-width: 600px) {
-  #map-container {
+  #map {
     height: 300vw;
     background-position: 62% 0%;
     background-size: 300%;
   }
 }
 @media screen and (min-width: 900px) {
-  #map-container {
+  #map {
     height: 225vw;
     background-position: 60% 0%;
     background-size: 250%;
   }
 }
 @media screen and (min-width: 1200px) {
-  #map-container {
+  #map {
     height: 2200px;
     background-position: 55% 0%;
     background-size: auto;
@@ -1164,7 +1164,7 @@ footer[role=contentinfo] a:hover {
 }
 
 @media screen and (min-width: 600px) {
-  #address-info,
+  #contact,
 #opening-hours {
     width: 50%;
     flex-direction: row;
@@ -1175,7 +1175,7 @@ footer[role=contentinfo] a:hover {
 }
 
 @media screen and (min-width: 600px) {
-  #address-info {
+  #contact {
     align-items: flex-start;
     text-align: left;
   }

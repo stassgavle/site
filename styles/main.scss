@@ -515,7 +515,7 @@ header[role="banner"]{
   }
 }
 
-#map-container {
+#map {
   width: 100%;
   height: 400vw;
   margin-top: -10vw;
@@ -647,7 +647,7 @@ footer[role="contentinfo"] {
   }
 }
 
-#address-info,
+#contact,
 #opening-hours {
   @media screen and (min-width: $mobile-break) {
     width: 50%;
@@ -658,7 +658,7 @@ footer[role="contentinfo"] {
   }
 }
 
-#address-info {
+#contact {
   @media screen and (min-width: $mobile-break) {
     align-items: flex-start;
     text-align: left;
