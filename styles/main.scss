@@ -45,7 +45,7 @@ h1, h2, h3 {
   font-weight: $base-weight;
 }
 
-h1 { font-size: 40px; }
+h1 { font-size: 56px; }
 h2 { margin: 0 0 0.5em 0; }
 p { margin-top: 0; }
 strong { font-weight: 800; }
@@ -68,7 +68,7 @@ body {
 header[role="banner"]{
   position: relative;
   @media only screen and (min-width: $mobile-break) {
-    min-height: 1100px;
+    min-height: 1200px;
   }
 }
 
@@ -118,7 +118,7 @@ header[role="banner"]{
 
 .hero-text-container {
   padding: 1em;
-  margin: 2em 0;
+  margin: 3.5em 0;
   max-width: $max-section-text-width;
   h1 {
     max-width: $max-section-header-width;
@@ -128,7 +128,8 @@ header[role="banner"]{
   @media only screen and (min-width: $mobile-break) {
     color: $secondary-color;
     margin-top: 30vh;
-    background-color: rgba(black, 0.6);
+    background-color: rgba(black, 0.8);
+    border: 4px double $secondary-color;
   }
 }
 

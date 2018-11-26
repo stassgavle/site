@@ -427,7 +427,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 56px;
 }
 
 h2 {
@@ -464,7 +464,7 @@ header[role=banner] {
 }
 @media only screen and (min-width: 600px) {
   header[role=banner] {
-    min-height: 1100px;
+    min-height: 1200px;
   }
 }
 
@@ -525,7 +525,7 @@ header[role=banner] {
 
 .hero-text-container {
   padding: 1em;
-  margin: 2em 0;
+  margin: 3.5em 0;
   max-width: 700px;
 }
 .hero-text-container h1 {
@@ -537,7 +537,8 @@ header[role=banner] {
   .hero-text-container {
     color: #F3F3F3;
     margin-top: 30vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px double #F3F3F3;
   }
 }
 
