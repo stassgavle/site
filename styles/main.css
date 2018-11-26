@@ -750,6 +750,7 @@ body {
   #brands-content-container {
     background-color: #fff;
     box-shadow: 0 0 2px;
+    border-radius: 3px;
   }
   #brands-content-container .ribbon {
     display: block;

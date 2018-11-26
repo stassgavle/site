@@ -344,6 +344,7 @@ header[role="banner"]{
   @media only screen and (min-width: $tablet-break) {
     background-color: #fff;
     box-shadow: 0 0 2px;
+    border-radius: 3px;
 
     .ribbon { display: block; }
     .ribbon-top-left {
