@@ -1101,6 +1101,11 @@ footer[role=contentinfo] {
     padding-top: 10vw;
   }
 }
+@media screen and (min-width: 1200px) {
+  footer[role=contentinfo] {
+    padding-top: 5vw;
+  }
+}
 footer[role=contentinfo] a {
   color: #F3F3F3;
   transition: letter-spacing 0.3s;
@@ -1155,6 +1160,11 @@ footer[role=contentinfo] a:hover {
 
 #social-media-container {
   margin-bottom: 10vw;
+}
+@media only screen and (min-width: 1200px) {
+  #social-media-container {
+    margin-bottom: 5vw;
+  }
 }
 
 #social-media-container img {
