@@ -442,6 +442,10 @@ p {
   margin-top: 0;
 }
 
+strong {
+  font-weight: 800;
+}
+
 body {
   color: #36373A;
   font-size: 26px;
