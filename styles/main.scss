@@ -205,7 +205,7 @@ header[role="banner"]{
   @media only screen and (max-width: $tablet-break) {
     display: flex;
     flex-direction: column;
-    padding: 2em 0;
+    padding: 4em 0;
     text-align: center;
     top: 0;
     left: 0;
@@ -221,6 +221,8 @@ header[role="banner"]{
   top: 0;
   right: 0;
   cursor: pointer;
+  transition: transform 0.3s;
+  &:hover { transform: rotate(180deg); }
   @media only screen and (min-width: $tablet-break) {
     display: none;
   }
@@ -228,7 +230,8 @@ header[role="banner"]{
 
 .cross-character {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 3em;
+  height: 1.2em;
   margin-top: -0.2em;
   color: $secondary-color;
   padding: 0 0.1em;
