@@ -67,11 +67,9 @@ body {
 
 header[role="banner"]{
   position: relative;
-
   @media only screen and (min-width: $mobile-break) {
     min-height: 1000px;
   }
-
 }
 
 .header-content-container {
@@ -89,11 +87,9 @@ header[role="banner"]{
   margin-top: 100px;
   height: auto;
   path { fill: $primary-color; }
-
   @media only screen and (min-width: $mobile-break) {
     display: none;
   }
-
 }
 
 #company-logo-bold {
@@ -102,7 +98,6 @@ header[role="banner"]{
   max-width: 300px;
   height: auto;
   path { fill: $secondary-color; }
-
   @media only screen and (min-width: $mobile-break) {
     display: block;
   }
@@ -113,13 +108,11 @@ header[role="banner"]{
   padding: 1em;
   margin: 2em 0;
   max-width: $max-section-text-width;
-
   h1 {
     max-width: $max-section-header-width;
     margin-left: auto;
     margin-right: auto;
   }
-
   @media only screen and (min-width: $mobile-break) {
     color: $secondary-color;
     margin-top: 30vh;
@@ -152,26 +145,20 @@ header[role="banner"]{
 }
 
 #menu-toggle-checkbox { display: none; }
-
 #menu-toggle-checkbox:checked + #burger-toggle { display: none; }
 
 #main-menu {
   display: none;
   position: fixed;
   overflow: scroll;
-
   a {
     text-decoration: none;
     padding-top: 1em;
     padding-bottom: 1em;
     font-weight: $bold-weight;
     color: $secondary-color;
-    &:hover {
-      background-color: rgba(white, 0.1);
-    }
-    &:visited {
-      color: $secondary-color;
-    }
+    &:hover { background-color: rgba(white, 0.1); }
+    &:visited { color: $secondary-color; }
   }
 
   @media only screen and (min-width: $tablet-break) {
@@ -179,7 +166,6 @@ header[role="banner"]{
     position: relative;
     justify-content: center;
     margin-top: 2em;
-
     a { padding: 1em; }
   }
 }
@@ -223,7 +209,6 @@ header[role="banner"]{
     width: 200%;
     margin-left: -50%;
   }
-
   @media only screen and (min-width: $mobile-break) {
     position: absolute;
     top: 0;
@@ -239,11 +224,9 @@ header[role="banner"]{
     background-color: $hero-background-color;
     img { display: none; }
   }
-
   @media only screen and (min-width: $tablet-break) {
     min-height: 1000px;
   }
-
 }
 
 #showcase {
@@ -319,7 +302,6 @@ header[role="banner"]{
     }
   }
 
-
   img { object-fit: cover; }
 }
 
@@ -329,7 +311,6 @@ header[role="banner"]{
   align-items: center;
   margin-top: $section-gutter * 2;
   z-index: 1;
-
   @media only screen and (min-width: $tablet-break) {
   margin-top: $section-gutter;
   background-image: url("../images/background-wood.jpg");
@@ -390,7 +371,6 @@ header[role="banner"]{
   position: absolute;
   right: 0;
   bottom: 0;
-
   @media only screen and (min-width: $tablet-break) {
     display: block;
     right: 1%;
@@ -410,7 +390,6 @@ header[role="banner"]{
   text-align: center;
   max-width: $max-section-text-width;
   align-items: center;
-
   h2 { max-width: $max-section-header-width; }
 }
 
@@ -480,7 +459,6 @@ header[role="banner"]{
   max-width: $max-section-text-width;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
   justify-content: flex-start;
   h2 { max-width: $max-section-header-width; }
   @media screen and (min-width: $mobile-break) {
