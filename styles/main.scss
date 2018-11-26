@@ -104,6 +104,18 @@ header[role="banner"]{
 
 }
 
+#mobile-menu-logo {
+  display: block;
+  width: 250px;
+  height: auto;
+  min-height: 200px;
+  path { fill: $secondary-color; }
+  margin-bottom: $section-gutter;
+  @media only screen and (min-width: $tablet-break) {
+    display: none;
+  }
+}
+
 .hero-text-container {
   padding: 1em;
   margin: 2em 0;
@@ -208,6 +220,7 @@ header[role="banner"]{
   @media only screen and (max-width: $tablet-break) {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 4em 0;
     text-align: center;
     top: 0;
@@ -215,7 +228,7 @@ header[role="banner"]{
     bottom: 0;
     width: 100%;
     max-width: 500px;
-    background-color: rgba($primary-color, 0.97);
+    background-color: rgba(black, 0.95);
   }
 }
 
@@ -266,6 +279,11 @@ header[role="banner"]{
   @media only screen and (min-width: $tablet-break) {
     min-height: 1000px;
   }
+}
+
+main[role="main"] {
+  position: relative;
+  z-index: 1;
 }
 
 #showcase {

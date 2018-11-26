@@ -507,6 +507,22 @@ header[role=banner] {
   }
 }
 
+#mobile-menu-logo {
+  display: block;
+  width: 250px;
+  height: auto;
+  min-height: 200px;
+  margin-bottom: 10vw;
+}
+#mobile-menu-logo path {
+  fill: #F3F3F3;
+}
+@media only screen and (min-width: 900px) {
+  #mobile-menu-logo {
+    display: none;
+  }
+}
+
 .hero-text-container {
   padding: 1em;
   margin: 2em 0;
@@ -634,6 +650,7 @@ header[role=banner] {
   #menu-toggle-checkbox:checked ~ #main-menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 4em 0;
     text-align: center;
     top: 0;
@@ -641,7 +658,7 @@ header[role=banner] {
     bottom: 0;
     width: 100%;
     max-width: 500px;
-    background-color: rgba(54, 55, 58, 0.97);
+    background-color: rgba(0, 0, 0, 0.95);
   }
 }
 
@@ -702,6 +719,11 @@ header[role=banner] {
   #hero-image {
     min-height: 1000px;
   }
+}
+
+main[role=main] {
+  position: relative;
+  z-index: 1;
 }
 
 #showcase {
