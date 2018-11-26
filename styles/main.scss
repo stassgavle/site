@@ -575,6 +575,13 @@ footer[role="contentinfo"] {
     padding-top: $section-gutter;
 
   }
+  a {
+    color: $secondary-color;
+    transition: letter-spacing 0.3s;
+  }
+  a:hover {
+    letter-spacing: 0.05em;
+  }
 }
 
 #footer-content-container {
@@ -672,6 +679,4 @@ footer[role="contentinfo"] {
     font-size: 1em;
   }
   p { margin: 0; }
-  a { color: $secondary-color; }
-  a:hover { font-weight: bold; }
 }

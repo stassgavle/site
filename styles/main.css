@@ -1078,6 +1078,13 @@ footer[role=contentinfo] {
     padding-top: 10vw;
   }
 }
+footer[role=contentinfo] a {
+  color: #F3F3F3;
+  transition: letter-spacing 0.3s;
+}
+footer[role=contentinfo] a:hover {
+  letter-spacing: 0.05em;
+}
 
 #footer-content-container {
   width: 90vw;
@@ -1193,12 +1200,6 @@ footer[role=contentinfo] {
 }
 #copy-info p {
   margin: 0;
-}
-#copy-info a {
-  color: #F3F3F3;
-}
-#copy-info a:hover {
-  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */
