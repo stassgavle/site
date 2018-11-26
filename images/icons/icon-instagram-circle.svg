@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M27,54 C12.0883118,54 0,41.9116882 0,27 C0,12.0883118 12.0883118,0 27,0 C41.9116882,0 54,12.0883118 54,27 C54,41.9116882 41.9116882,54 27,54 Z M20.3218753,10.546875 C14.9232917,10.546875 10.546875,14.9232917 10.546875,20.3218753 L10.546875,33.6781247 C10.546875,39.0767083 14.9232917,43.453125 20.3218753,43.453125 L33.6781247,43.453125 C39.0767083,43.453125 43.453125,39.0767083 43.453125,33.6781247 L43.453125,20.3218753 C43.453125,14.9232917 39.0767083,10.546875 33.6781247,10.546875 L20.3218753,10.546875 Z M20.3000002,13.5 L33.6999998,13.5 C37.4555362,13.5 40.5,16.5444638 40.5,20.3000002 L40.5,33.6999998 C40.5,37.4555362 37.4555362,40.5 33.6999998,40.5 L20.3000002,40.5 C16.5444638,40.5 13.5,37.4555362 13.5,33.6999998 L13.5,20.3000002 C13.5,16.5444638 16.5444638,13.5 20.3000002,13.5 Z M27,35.4375 C31.6599026,35.4375 35.4375,31.6599026 35.4375,27 C35.4375,22.3400974 31.6599026,18.5625 27,18.5625 C22.3400974,18.5625 18.5625,22.3400974 18.5625,27 C18.5625,31.6599026 22.3400974,35.4375 27,35.4375 Z M27,32.484375 C23.9710633,32.484375 21.515625,30.0289367 21.515625,27 C21.515625,23.9710633 23.9710633,21.515625 27,21.515625 C30.0289367,21.515625 32.484375,23.9710633 32.484375,27 C32.484375,30.0289367 30.0289367,32.484375 27,32.484375 Z M35.6484375,20.25 C36.6969156,20.25 37.546875,19.4000406 37.546875,18.3515625 C37.546875,17.3030844 36.6969156,16.453125 35.6484375,16.453125 C34.5999594,16.453125 33.75,17.3030844 33.75,18.3515625 C33.75,19.4000406 34.5999594,20.25 35.6484375,20.25 Z" id="path-1"></path>
+        <radialGradient cx="20.2412025%" cy="90.2942653%" fx="20.2412025%" fy="90.2942653%" r="55.8344763%" gradientTransform="translate(0.202412,0.902943),scale(0.999132,1.000000),rotate(-53.346862),translate(-0.202412,-0.902943)" id="radialGradient-3">
+            <stop stop-color="#FFFF45" offset="0%"></stop>
+            <stop stop-color="#FFE03C" stop-opacity="0.862716763" offset="23.2817016%"></stop>
+            <stop stop-color="#FC2300" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="22.19078%" cy="0%" fx="22.19078%" fy="0%" r="72.5824913%" gradientTransform="translate(0.221908,0.000000),scale(0.999132,1.000000),rotate(77.248173),translate(-0.221908,-0.000000)" id="radialGradient-4">
+            <stop stop-color="#4A62CC" offset="0%"></stop>
+            <stop stop-color="#4A62CC" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-5" x="0" y="0.046875" width="54" height="53.953125"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-733.000000, -6719.000000)">
+            <g id="Footer" transform="translate(-109.000000, 6153.000000)">
+                <g id="Social-Media" transform="translate(762.000000, 566.000000)">
+                    <g id="Rectangle" transform="translate(80.000000, 0.000000)">
+                        <circle id="Oval" fill="#E5E5E5" cx="27" cy="27" r="24"></circle>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                        <g mask="url(#mask-2)">
+                            <use fill="#BD3B8C" xlink:href="#path-5"></use>
+                            <use fill="url(#radialGradient-3)" xlink:href="#path-5"></use>
+                            <use fill="url(#radialGradient-4)" xlink:href="#path-5"></use>
+                            <use fill-opacity="0.6" fill="#6E6D6D" style="mix-blend-mode: exclusion;" xlink:href="#path-5"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
