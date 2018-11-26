@@ -650,7 +650,7 @@ header[role=banner] {
   top: 0;
   right: 0;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 #cross-toggle:hover {
   transform: rotate(180deg);

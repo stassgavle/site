@@ -224,7 +224,7 @@ header[role="banner"]{
   top: 0;
   right: 0;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   &:hover { transform: rotate(180deg); }
   @media only screen and (min-width: $tablet-break) {
     display: none;
