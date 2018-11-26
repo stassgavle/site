@@ -953,4 +953,32 @@ header[role=banner] {
   }
 }
 
+#map-container {
+  width: 100%;
+  height: 2000px;
+  overflow: hidden;
+  background-image: url(../images/map-gavle.svg);
+  background-repeat: no-repeat;
+  background-position: 55% 0%;
+  background-size: 450%;
+}
+@media screen and (min-width: 600px) {
+  #map-container {
+    background-position: 62% 0%;
+    background-size: 300%;
+  }
+}
+@media screen and (min-width: 900px) {
+  #map-container {
+    background-position: 60% 0%;
+    background-size: 250%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #map-container {
+    background-position: 60% 0%;
+    background-size: 200%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
