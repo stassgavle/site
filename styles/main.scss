@@ -342,7 +342,6 @@ header[role="banner"]{
   .ribbon { display: none;}
 
   @media only screen and (min-width: $tablet-break) {
-    @include content-restraints;
     background-color: #fff;
     box-shadow: 0 0 2px;
 
