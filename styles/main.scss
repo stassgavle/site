@@ -47,6 +47,8 @@ h1, h2, h3 {
 body { font-family: $body-font-family; }
 
 h1 { font-size: 40px; }
+h2 { margin: 0 0 0.5em 0; }
+p { margin-top: 0; }
 
 
 body {
@@ -59,7 +61,7 @@ body {
 header[role="banner"]{
 
   @media only screen and (min-width: $mobile-break) {
-    min-height: 100vh;
+    min-height: 1000px;
   }
 
 }
@@ -100,7 +102,7 @@ header[role="banner"]{
 }
 
 .hero-text-container {
-  padding: 0 1em;
+  padding: 1em;
   margin: 2em 0;
   max-width: $max-section-text-width;
 
@@ -354,6 +356,11 @@ header[role="banner"]{
   }
 
   @media only screen and (min-width: $hd-break) {
+    margin-top: $section-gutter / 2;
+    margin-bottom: $section-gutter / 2;
+    padding-top: $section-gutter;
+    padding-bottom: $section-gutter;
+
     .ribbon-top-left {
       transform: none;
     }
@@ -402,6 +409,7 @@ header[role="banner"]{
   justify-items: center;
   @media only screen and (min-width: $tablet-break) {
     width: $max-section-text-width;
+    margin-top: $section-gutter / 4;
   }
   @media only screen and (min-width: $hd-break) {
     width: inherit;
@@ -425,9 +433,8 @@ header[role="banner"]{
     &:nth-child(3n + 3) { padding: calc(30% / 4) 0 calc(30% / 4) calc(30% / 4); }
   }
   @media screen and (min-width: $hd-break) {
-    width: calc(80%/3);
-    &:nth-child(3n + 1) { padding: calc(20% / 4) calc(20% / 4) calc(20% / 4) 0; }
-    &:nth-child(3n + 2) { padding: calc(20% / 4); }
-    &:nth-child(3n + 3) { padding: calc(20% / 4) 0 calc(20% / 4) calc(20% / 4); }
+    &:nth-child(3n + 1) { padding: calc(10% / 4) calc(20% / 4) calc(10% / 4) 0; }
+    &:nth-child(3n + 2) { padding: calc(10% / 4) calc(20% / 4)}
+    &:nth-child(3n + 3) { padding: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4); }
   }
 }

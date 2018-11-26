@@ -434,6 +434,14 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin-top: 0;
+}
+
 body {
   color: #36373A;
   font-size: 26px;
@@ -443,7 +451,7 @@ body {
 
 @media only screen and (min-width: 600px) {
   header[role=banner] {
-    min-height: 100vh;
+    min-height: 1000px;
   }
 }
 
@@ -487,7 +495,7 @@ body {
 }
 
 .hero-text-container {
-  padding: 0 1em;
+  padding: 1em;
   margin: 2em 0;
   max-width: 700px;
 }
@@ -756,6 +764,12 @@ body {
   }
 }
 @media only screen and (min-width: 1200px) {
+  #brands-content-container {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
   #brands-content-container .ribbon-top-left {
     transform: none;
   }
@@ -809,6 +823,7 @@ body {
 @media only screen and (min-width: 900px) {
   .brands-logo-container {
     width: 700px;
+    margin-top: 2.5vw;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -855,17 +870,14 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .brand-logo {
-    width: calc(80%/3);
-  }
   .brand-logo:nth-child(3n+1) {
-    padding: calc(20% / 4) calc(20% / 4) calc(20% / 4) 0;
+    padding: calc(10% / 4) calc(20% / 4) calc(10% / 4) 0;
   }
   .brand-logo:nth-child(3n+2) {
-    padding: calc(20% / 4);
+    padding: calc(10% / 4) calc(20% / 4);
   }
   .brand-logo:nth-child(3n+3) {
-    padding: calc(20% / 4) 0 calc(20% / 4) calc(20% / 4);
+    padding: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4);
   }
 }
 
