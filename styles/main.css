@@ -1131,6 +1131,11 @@ footer[role=contentinfo] {
   margin: 0.5em;
 }
 
+#social-media-container a:hover {
+  filter: saturate(2);
+  transition: filter 0.2s;
+}
+
 #company-info {
   display: flex;
   flex-wrap: nowrap;
