@@ -567,6 +567,7 @@ header[role=banner] {
   display: none;
   position: fixed;
   overflow: scroll;
+  font-size: 0.8em;
 }
 #main-menu a {
   text-decoration: none;
@@ -574,9 +575,40 @@ header[role=banner] {
   padding-bottom: 1em;
   font-weight: 600;
   color: #F3F3F3;
+  text-transform: uppercase;
+  position: relative;
 }
-#main-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+#main-menu a:before, #main-menu a:after {
+  height: 1px;
+  width: 50%;
+  background-color: #F3F3F3;
+  content: "";
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+}
+@media only screen and (min-width: 900px) {
+  #main-menu a:before, #main-menu a:after {
+    width: inherit;
+    left: 0%;
+    right: 0%;
+  }
+}
+#main-menu a:before {
+  top: 0;
+}
+#main-menu a:after {
+  bottom: 0;
+}
+#main-menu a:hover:before {
+  opacity: 1;
+  transform: translateY(10px);
+}
+#main-menu a:hover:after {
+  opacity: 1;
+  transform: translateY(-10px);
 }
 #main-menu a:visited {
   color: #F3F3F3;
@@ -586,7 +618,7 @@ header[role=banner] {
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 3.5em;
   }
   #main-menu a {
     padding: 1em;

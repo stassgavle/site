@@ -68,7 +68,7 @@ body {
 header[role="banner"]{
   position: relative;
   @media only screen and (min-width: $mobile-break) {
-    min-height: 1000px;
+    min-height: 1100px;
   }
 }
 
@@ -151,13 +151,43 @@ header[role="banner"]{
   display: none;
   position: fixed;
   overflow: scroll;
+  font-size: 0.8em;
   a {
     text-decoration: none;
     padding-top: 1em;
     padding-bottom: 1em;
     font-weight: $bold-weight;
     color: $secondary-color;
-    &:hover { background-color: rgba(white, 0.1); }
+    text-transform: uppercase;
+    position: relative;
+
+    &:before, &:after {
+      height: 1px;
+      width: 50%;
+      background-color: $secondary-color;
+      content: '';
+      position: absolute;
+      left: 25%;
+      right: 25%;
+      transition: opacity 0.3s, transform 0.3s;
+      opacity: 0;
+      @media only screen and (min-width: $tablet-break) {
+        width: inherit;
+        left: 0%;
+        right: 0%;
+      }
+    }
+    &:before { top: 0; }
+    &:after { bottom: 0; }
+    &:hover:before {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+    &:hover:after {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+
     &:visited { color: $secondary-color; }
   }
 
@@ -165,7 +195,7 @@ header[role="banner"]{
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 3.5em;
     a { padding: 1em; }
   }
 }
