@@ -912,6 +912,17 @@ header[role=banner] {
   width: 90vw;
   max-width: 1400px;
 }
+@media screen and (min-width: 900px) {
+  #location-content-container {
+    position: relative;
+    left: 5vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #location-content-container {
+    left: 10vw;
+  }
+}
 
 .location-text-container {
   max-width: 700px;
@@ -955,7 +966,8 @@ header[role=banner] {
 
 #map-container {
   width: 100%;
-  height: 2000px;
+  height: 400vw;
+  margin-top: -10vw;
   overflow: hidden;
   background-image: url(../images/map-gavle.svg);
   background-repeat: no-repeat;
@@ -964,20 +976,45 @@ header[role=banner] {
 }
 @media screen and (min-width: 600px) {
   #map-container {
+    height: 300vw;
     background-position: 62% 0%;
     background-size: 300%;
   }
 }
 @media screen and (min-width: 900px) {
   #map-container {
+    height: 225vw;
     background-position: 60% 0%;
     background-size: 250%;
   }
 }
 @media screen and (min-width: 1200px) {
   #map-container {
-    background-position: 60% 0%;
-    background-size: 200%;
+    height: 2200px;
+    background-position: 55% 0%;
+    background-size: auto;
+  }
+}
+
+#colleagues {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#colleagues-polaroid {
+  max-width: 90%;
+  box-shadow: 0 2px 6px;
+  transform: rotate(-2deg);
+  position: absolute;
+  top: auto;
+  bottom: -2em;
+}
+@media screen and (min-width: 900px) {
+  #colleagues-polaroid {
+    transform: rotate(-4deg);
+    right: auto;
+    left: 10%;
   }
 }
 
