@@ -465,6 +465,7 @@ header[role=banner] {
 @media only screen and (min-width: 600px) {
   header[role=banner] {
     min-height: 1200px;
+    padding-bottom: 1.5em;
   }
 }
 
@@ -495,7 +496,7 @@ header[role=banner] {
 #header-logo-bold {
   display: none;
   width: 70%;
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
 }
 #header-logo-bold path {
