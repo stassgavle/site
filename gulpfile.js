@@ -13,7 +13,7 @@ var webserver = require('gulp-webserver');
 var htmlclean = require('gulp-htmlclean');
 // var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
 
 var del = require('del');
 
