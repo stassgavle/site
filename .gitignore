@@ -15,3 +15,10 @@
 
 ## local vs code history
 .history
+
+## npm
+node_modules
+
+#local dev environment and production folders
+tmp
+dist
