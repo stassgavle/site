@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
+var sourcemaps = require('gulp-sourcemaps');
 
 var webserver = require('gulp-webserver');
 
@@ -49,7 +50,9 @@ gulp.task('html', function () {
 });
 gulp.task('js', function () {
   return gulp.src(paths.srcJS)
-    .pipe(concat('scripts.js'))
+    .pipe(sourcemaps.init())
+      .pipe(concat('scripts.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.tmp));
 });
 gulp.task('images', function () {
@@ -62,8 +65,10 @@ gulp.task('scss', function () {
     autoprefixer,
   ];
   return gulp.src(paths.srcSCSS)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(processors))
+    .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(postcss(processors))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.tmp));
 });
 gulp.task('deliver', ['delete:tmp', 'html', 'js', 'images', 'scss']);
@@ -107,8 +112,10 @@ gulp.task('html:dist', function () {
 });
 gulp.task('js:dist', function () {
   return gulp.src(paths.srcJS)
-    .pipe(concat('script.min.js'))
-    .pipe(uglify())
+    .pipe(sourcemaps.init())
+      .pipe(concat('script.min.js'))
+      .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist));
 });
 gulp.task('images:dist', function () {
@@ -121,8 +128,10 @@ gulp.task('scss:dist', function () {
     cssnano
   ];
   return gulp.src(paths.srcSCSS)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(processors))
+    .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(postcss(processors))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist));
 });
 gulp.task('deliver:dist', ['delete:dist', 'html:dist', 'js:dist', 'images:dist', 'scss:dist']);
