@@ -1,4 +1,4 @@
-window.onload = function() {
+var setupLinkScrollHandlers = function() {
   document.getElementById('brands-link').addEventListener('click', () => {
     scrollIt(
       document.getElementById('brands'),
@@ -31,6 +31,9 @@ window.onload = function() {
       () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
     );
   });
+}
 
+window.onload = function() {
+  setupLinkScrollHandlers();
 };
 
