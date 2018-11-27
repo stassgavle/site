@@ -33,7 +33,18 @@ var setupLinkScrollHandlers = function() {
   });
 }
 
+var setupMobileMenuCloseHandlers = function() {
+  var elements = document.getElementsByClassName('menu-link');
+
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', () => {
+      document.getElementById('menu-toggle-checkbox').checked = false;
+    });
+  }
+}
+
 window.onload = function() {
   setupLinkScrollHandlers();
+  setupMobileMenuCloseHandlers();
 };
 
