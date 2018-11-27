@@ -113,7 +113,7 @@ gulp.task('html:dist', function () {
 gulp.task('js:dist', function () {
   return gulp.src(paths.srcJS)
     .pipe(sourcemaps.init())
-      .pipe(concat('script.min.js'))
+      .pipe(concat('scripts.js'))
       .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist));
