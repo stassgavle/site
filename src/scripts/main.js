@@ -17,7 +17,7 @@ window.onload = function() {
   });
   document.getElementById('map-link').addEventListener('click', () => {
     scrollIt(
-      document.getElementById('map'),
+      document.getElementById('map').offsetTop + 500,
       1400,
       'easeOutQuad',
       () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
