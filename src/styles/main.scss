@@ -165,10 +165,34 @@ header[role="banner"]{
 #menu-toggle-checkbox:checked + #burger-toggle { display: none; }
 
 #main-menu {
-  display: none;
   position: fixed;
   overflow: scroll;
   font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  // observe: up to tablet break
+  @media only screen and (max-width: $tablet-break) {
+    background-color: rgba(black, 0.95);
+    max-width: 500px;
+    width: 100%;
+    padding: 4em 0;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    transition: left 0.3s;
+  }
+
+  @media only screen and (min-width: $tablet-break) {
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 3.5em;
+    a { padding: 1em; }
+  }
+
   a {
     text-decoration: none;
     padding-top: 1em;
@@ -204,33 +228,15 @@ header[role="banner"]{
       opacity: 1;
       transform: translateY(-10px);
     }
-
     &:visited { color: $secondary-color; }
-  }
-
-  @media only screen and (min-width: $tablet-break) {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    margin-top: 3.5em;
-    a { padding: 1em; }
   }
 }
 
 #menu-toggle-checkbox:checked ~ #main-menu {
-  // observe: up to and including tablet only
   @media only screen and (max-width: $tablet-break) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4em 0;
-    text-align: center;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    max-width: 500px;
-    background-color: rgba(black, 0.95);
   }
 }
 
