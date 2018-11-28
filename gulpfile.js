@@ -99,8 +99,10 @@ gulp.task('default', ['watch']);
 /* build and package for deployment */
 
 // remove earlier dist builds
+// – only delete content (keep directory) as to not confuse
+// git (when pushing worktree to gh-pages branch)
 gulp.task('delete:dist', function () {
-  del.sync([paths.dist]);
+  del.sync([`${paths.dist}/**`, `!${paths.dist}`]);
 });
 
 // clean, minify, etc. css/html/js and copy src to dist
