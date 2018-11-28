@@ -277,7 +277,7 @@ header[role="banner"]{
     right: 0;
     z-index: 0;
     min-height: 800px;
-    background-image: url("../images/header-hero-store.jpg");
+    background-image: url("./images/header-hero-store.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -374,7 +374,7 @@ header[role="banner"]{
   z-index: 1;
   @media only screen and (min-width: $tablet-break) {
   margin-top: $section-gutter;
-  background-image: url("../images/background-wood.jpg");
+  background-image: url("./images/background-wood.jpg");
     background-size: cover;
     background-position: bottom left;
     box-shadow: 0 0 3px 5px #161817;
@@ -542,7 +542,7 @@ header[role="banner"]{
   height: 400vw;
   margin-top: -10vw;
   overflow: hidden;
-  background-image: url(../images/map-gavle.svg);
+  background-image: url("./images/map-gavle.svg");
   background-repeat: no-repeat;
   background-position: 55% 0%;
   background-size: 450%;
@@ -584,7 +584,7 @@ header[role="banner"]{
 }
 
 footer[role="contentinfo"] {
-  background-image: url("../images/footer-male-bust.jpg");
+  background-image: url("./images/footer-male-bust.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
