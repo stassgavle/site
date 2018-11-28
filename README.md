@@ -6,7 +6,7 @@ Commercial Website for company Stass (LJB Konfektion AB).
 
 Project uses Gulp to build and serve content from source files in /src.
 
-These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on Github Pages.
+These instructions will get you a copy of the project up and running on your local machine for development. See [Deployment](#deployment) for notes on how to deploy the project on Github Pages.
 
 ### Prerequisites
 
