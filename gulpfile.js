@@ -32,7 +32,7 @@ var paths = {
   distIndex: 'dist/index.html',
   distCSS: 'dist/**/*.css',
   distJS: 'dist/**/*.js',
-  distImages: 'dist/images/**/*',
+  distImages: 'dist/images',
 };
 
 
