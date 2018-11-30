@@ -23,6 +23,8 @@ var paths = {
   srcSCSS: 'src/styles/**/*.scss',
   srcJS: 'src/scripts/**/*.js',
   srcImages: 'src/images/**/*',
+  // use generic 'misc' (instead of specific CNAME) if more files needs copying in the future
+  srcCNAME: 'src/CNAME',
   tmp: 'tmp',
   tmpIndex: 'tmp/index.html',
   tmpCSS: 'tmp/**/*.css',
@@ -105,7 +107,7 @@ gulp.task('delete:dist', function () {
   del.sync([`${paths.dist}/**`, `!${paths.dist}`]);
 });
 
-// clean, minify, etc. css/html/js and copy src to dist
+// clean, minify, etc. css/html/js etc. and copy src to dist
 gulp.task('html:dist', function () {
   return gulp.src(paths.srcHTML)
     .pipe(htmlclean())
@@ -123,6 +125,10 @@ gulp.task('images:dist', function () {
   return gulp.src(paths.srcImages)
     .pipe(gulp.dest(paths.distImages));
 });
+gulp.task('cname:dist', function () {
+  return gulp.src(paths.srcCNAME)
+    .pipe(gulp.dest(paths.dist));
+});
 gulp.task('scss:dist', function () {
   var processors = [
     autoprefixer,
@@ -135,7 +141,7 @@ gulp.task('scss:dist', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist));
 });
-gulp.task('deliver:dist', ['delete:dist', 'html:dist', 'js:dist', 'images:dist', 'scss:dist']);
+gulp.task('deliver:dist', ['delete:dist', 'html:dist', 'js:dist', 'images:dist', 'cname:dist', 'scss:dist']);
 
 // inject css and js into html
 gulp.task('inject:dist', ['deliver:dist'], function () {
