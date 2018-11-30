@@ -10,6 +10,7 @@ $primary-color: #36373A;
 $secondary-color: #F3F3F3;
 $misc-color-brown: #4B3629;
 $misc-color-black: #343333;
+$misc-color-light-beige: #F6F4F2;
 
 $body-text-color: $primary-color;
 $hero-text-color: $secondary-color;
@@ -56,6 +57,8 @@ body {
   font-size: $base-font-size;
   font-weight: $base-weight;
   line-height: $base-line-height;
+  background-color: $secondary-color;
+  background-image: linear-gradient($secondary-color, $misc-color-light-beige);
 }
 
 .main-section {
