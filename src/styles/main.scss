@@ -513,18 +513,18 @@ header[role="banner"]{
 
 #location-content-container {
   @include content-restraints;
-  @media screen and (min-width: $tablet-break) {
-    position: relative;
-    left: 5vw;
-  }
-  @media screen and (min-width: $hd-break) {
-    left: 10vw;
-  }
 }
 
 .location-text-container {
   max-width: $max-section-text-width;
   h2 { max-width: $max-section-header-width; }
+  @media screen and (min-width: $tablet-break) {
+    position: relative;
+    left: 10vw;
+  }
+  @media screen and (min-width: $hd-break) {
+    left: 20vw;
+  }
 }
 
 .location-logos-container {
@@ -535,6 +535,13 @@ header[role="banner"]{
   h2 { max-width: $max-section-header-width; }
   @media screen and (min-width: $mobile-break) {
     align-items: flex-end;
+  }
+  @media screen and (min-width: $tablet-break) {
+    position: relative;
+    left: 10vw;
+  }
+  @media screen and (min-width: $hd-break) {
+    left: 20vw;
   }
 }
 
