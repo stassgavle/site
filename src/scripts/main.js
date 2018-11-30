@@ -43,8 +43,16 @@ var setupMobileMenuCloseHandlers = function() {
   }
 }
 
+var writeCopyrightYear = function() {
+  var currentYear = new Date().getFullYear();
+  if (currentYear > 2018) {
+    document.getElementById('js-copy-year').innerHTML = '2018 - ' + currentYear;
+  }
+}
+
 window.onload = function() {
   setupLinkScrollHandlers();
   setupMobileMenuCloseHandlers();
+  writeCopyrightYear();
 };
 
