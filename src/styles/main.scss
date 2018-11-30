@@ -173,6 +173,7 @@ header[role="banner"]{
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: visible; // otherwise ms-edge shows scrollbars for some reason
 
   // observe: up to tablet break
   @media only screen and (max-width: $tablet-break) {
