@@ -312,7 +312,8 @@ header[role="banner"]{
 .showcase-container {
   @include content-restraints;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   // progressive enhancement with css-grid
   display: grid;
@@ -344,7 +345,8 @@ header[role="banner"]{
   @media only screen and (min-width: $hd-break) {
     $showcase-grid-columns: 12;
     $showcase-grid-rows: 7;
-    max-height: $content-max-width / $showcase-grid-columns * $showcase-grid-rows;
+    // keep this max-height in case it is needed later (calculates correct grid-height)
+    // max-height: $content-max-width / $showcase-grid-columns * $showcase-grid-rows;
     grid-template-areas:
     'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
     'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
@@ -363,7 +365,11 @@ header[role="banner"]{
     }
   }
 
-  img { object-fit: cover; }
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    flex-grow: 1;
+  }
 }
 
 #brands {
