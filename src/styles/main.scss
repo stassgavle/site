@@ -8,13 +8,11 @@ $hd-break: 1200px;
 
 $primary-color: #36373A;
 $secondary-color: #F3F3F3;
-$misc-color-brown: #4B3629;
 $misc-color-black: #343333;
 $misc-color-light-beige: #F6F4F2;
 
 $body-text-color: $primary-color;
 $hero-text-color: $secondary-color;
-$hero-background-color: $misc-color-brown;
 
 $heading-font-family: 'Alice', serif;
 $body-font-family: 'Nunito', sans-serif;
@@ -284,7 +282,6 @@ header[role="banner"]{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: $hero-background-color;
     img { display: none; }
   }
   @media only screen and (min-width: $tablet-break) {
