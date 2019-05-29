@@ -489,10 +489,12 @@ header[role="banner"]{
   width: 37.5%;
   &:nth-child(2n + 1) { padding: 7.5% 7.5% 7.5% 0; }
   &:nth-child(2n + 2) { padding: 7.5% 0 7.5% 7.5%; }
+  &:last-child { padding: 7.5% 3.75% 7.5% 3.75%; }
   @media screen and (min-width: $mobile-break) {
     width: 25%;
     &:nth-child(2n + 1) { padding: 4% 10% 4% 0; }
     &:nth-child(2n + 2) { padding: 4% 0 4% 10%; }
+    &:last-child { padding: 7.5% 3.75% 7.5% 3.75%; }
   }
   @media screen and (min-width: $tablet-break) {
     width: calc(70%/3);
