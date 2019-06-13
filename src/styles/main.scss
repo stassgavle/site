@@ -631,6 +631,8 @@ header[role='banner'] {
 
 .partner-logo {
   margin: 1.5em 2em 1.5em 0;
+  max-width: 500px;
+  max-height: 250px;
   &:nth-child(1) {
     margin-left: 0;
   }
