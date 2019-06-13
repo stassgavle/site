@@ -1,15 +1,14 @@
 @import 'partials/normalize';
 @import 'modules/utilities';
 
-
 $mobile-break: 600px;
 $tablet-break: 900px;
 $hd-break: 1200px;
 
-$primary-color: #36373A;
-$secondary-color: #F3F3F3;
+$primary-color: #36373a;
+$secondary-color: #f3f3f3;
 $misc-color-black: #343333;
-$misc-color-light-beige: #F6F4F2;
+$misc-color-light-beige: #f6f4f2;
 
 $body-text-color: $primary-color;
 $hero-text-color: $secondary-color;
@@ -36,18 +35,27 @@ $section-gutter: 10vw;
 $max-section-text-width: 700px;
 $max-section-header-width: 11em;
 
-@import 'partials/ribbon';  // needs variables declared
+@import 'partials/ribbon'; // needs variables declared
 
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $heading-font-family;
   font-weight: $base-weight;
 }
 
-h1 { font-size: 56px; }
-h2 { margin: 0 0 0.5em 0; }
-p { margin-top: 0; }
-strong { font-weight: 800; }
+h1 {
+  font-size: 56px;
+}
+h2 {
+  margin: 0 0 0.5em 0;
+}
+p {
+  margin-top: 0;
+}
+strong {
+  font-weight: 800;
+}
 
 body {
   font-family: $body-font-family;
@@ -66,7 +74,7 @@ body {
   }
 }
 
-header[role="banner"]{
+header[role='banner'] {
   position: relative;
   @media only screen and (min-width: $mobile-break) {
     min-height: 1200px;
@@ -88,7 +96,9 @@ header[role="banner"]{
   max-width: 250px;
   margin-top: 100px;
   height: auto;
-  path { fill: $primary-color; }
+  path {
+    fill: $primary-color;
+  }
   @media only screen and (min-width: $mobile-break) {
     display: none;
   }
@@ -100,11 +110,12 @@ header[role="banner"]{
   max-width: 350px;
   height: auto;
   margin-top: 2.5em;
-  path { fill: $secondary-color; }
+  path {
+    fill: $secondary-color;
+  }
   @media only screen and (min-width: $mobile-break) {
     display: block;
   }
-
 }
 
 #mobile-menu-logo {
@@ -112,7 +123,9 @@ header[role="banner"]{
   width: 250px;
   height: auto;
   min-height: 200px;
-  path { fill: $secondary-color; }
+  path {
+    fill: $secondary-color;
+  }
   margin-bottom: $section-gutter;
   @media only screen and (min-width: $tablet-break) {
     display: none;
@@ -163,8 +176,12 @@ header[role="banner"]{
   }
 }
 
-#menu-toggle-checkbox { display: none; }
-#menu-toggle-checkbox:checked + #burger-toggle { display: none; }
+#menu-toggle-checkbox {
+  display: none;
+}
+#menu-toggle-checkbox:checked + #burger-toggle {
+  display: none;
+}
 
 #main-menu {
   position: fixed;
@@ -192,7 +209,9 @@ header[role="banner"]{
     justify-content: center;
     flex-direction: row;
     margin-top: 3.5em;
-    a { padding: 1em; }
+    a {
+      padding: 1em;
+    }
   }
 
   a {
@@ -204,7 +223,8 @@ header[role="banner"]{
     text-transform: uppercase;
     position: relative;
 
-    &:before, &:after {
+    &:before,
+    &:after {
       height: 1px;
       width: 50%;
       background-color: $secondary-color;
@@ -220,8 +240,12 @@ header[role="banner"]{
         right: 0%;
       }
     }
-    &:before { top: 0; }
-    &:after { bottom: 0; }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
     &:hover:before {
       opacity: 1;
       transform: translateY(10px);
@@ -230,7 +254,9 @@ header[role="banner"]{
       opacity: 1;
       transform: translateY(-10px);
     }
-    &:visited { color: $secondary-color; }
+    &:visited {
+      color: $secondary-color;
+    }
   }
 }
 
@@ -249,7 +275,9 @@ header[role="banner"]{
   right: 0;
   cursor: pointer;
   transition: transform 0.5s;
-  &:hover { transform: rotate(180deg); }
+  &:hover {
+    transform: rotate(180deg);
+  }
   @media only screen and (min-width: $tablet-break) {
     display: none;
   }
@@ -280,17 +308,18 @@ header[role="banner"]{
     right: 0;
     z-index: 0;
     min-height: 800px;
-    background-image: url("./images/header-hero-store.jpg");
+    background-image: url('./images/header-hero-store.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    img { display: none; }
+    img {
+      display: none;
+    }
   }
   @media only screen and (min-width: $tablet-break) {
     min-height: 1000px;
   }
 }
-
 
 #showcase {
   display: flex;
@@ -304,7 +333,9 @@ header[role="banner"]{
 
 .showcase-text-container {
   @include content-restraints;
-  p { max-width: $description-width; }
+  p {
+    max-width: $description-width;
+  }
   @media only screen and (min-width: $hd-break) {
     display: flex;
     justify-content: space-between;
@@ -332,12 +363,24 @@ header[role="banner"]{
     'tertiary  tertiary  tertiary  tertiary'
     'tertiary  tertiary  tertiary  tertiary'
     'tertiary  tertiary  tertiary  tertiary';
-  & > *:nth-child(1) { grid-area: primary}
-  & > *:nth-child(2) { grid-area: secondary}
-  & > *:nth-child(3) { grid-area: misc-one}
-  & > *:nth-child(4) { grid-area: misc-two}
-  & > *:nth-child(5) { grid-area: tertiary}
-  & > * { overflow: hidden; }
+  & > *:nth-child(1) {
+    grid-area: primary;
+  }
+  & > *:nth-child(2) {
+    grid-area: secondary;
+  }
+  & > *:nth-child(3) {
+    grid-area: misc-one;
+  }
+  & > *:nth-child(4) {
+    grid-area: misc-two;
+  }
+  & > *:nth-child(5) {
+    grid-area: tertiary;
+  }
+  & > * {
+    overflow: hidden;
+  }
 
   // set up square cells (1:1 aspect ratio)
   $showcase-grid-columns: 4;
@@ -350,15 +393,18 @@ header[role="banner"]{
     // keep this max-height in case it is needed later (calculates correct grid-height)
     // max-height: $content-max-width / $showcase-grid-columns * $showcase-grid-rows;
     grid-template-areas:
-    'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
-    'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
-    'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
-    'primary  primary  primary  primary  primary  primary  primary  primary   tertiary  tertiary  tertiary  tertiary'
-    'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
-    'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
-    'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary';
+      'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
+      'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
+      'primary  primary  primary  primary  primary  primary  primary  primary   secondary secondary secondary secondary'
+      'primary  primary  primary  primary  primary  primary  primary  primary   tertiary  tertiary  tertiary  tertiary'
+      'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
+      'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary'
+      'misc-one misc-one misc-one misc-one misc-two misc-two misc-two misc-two  tertiary  tertiary  tertiary  tertiary';
     grid-template-columns: repeat($showcase-grid-columns, 1fr);
-    grid-auto-rows: minmax(calc(#{$content-width} / #{$showcase-grid-columns}), 75px);
+    grid-auto-rows: minmax(
+      calc(#{$content-width} / #{$showcase-grid-columns}),
+      75px
+    );
 
     // set exact grid row height (to maintain 1:1 cell aspect ratio) when content reaches max width
     // media query is nested since max-content-width shouldn't ever be set to exceed previous breakpoints
@@ -380,7 +426,7 @@ header[role="banner"]{
   align-items: center;
   z-index: 1;
   @media only screen and (min-width: $mobile-break) {
-  background-image: url("./images/background-wood.jpg");
+    background-image: url('./images/background-wood.jpg');
     background-size: cover;
     background-position: bottom left;
     box-shadow: 0 0 3px 5px #161817;
@@ -396,7 +442,9 @@ header[role="banner"]{
   align-items: center;
   z-index: 1;
 
-  .ribbon { display: none;}
+  .ribbon {
+    display: none;
+  }
 
   @media only screen and (min-width: $mobile-break) {
     background-color: #fff;
@@ -407,7 +455,9 @@ header[role="banner"]{
     padding-top: $section-gutter * 2;
     padding-bottom: $section-gutter * 2;
 
-    .ribbon { display: block; }
+    .ribbon {
+      display: block;
+    }
     .ribbon-top-left {
       transform: scale(0.7);
       transform-origin: top left;
@@ -465,7 +515,9 @@ header[role="banner"]{
   max-width: $max-section-text-width;
   padding: 0 1em;
   align-items: center;
-  h2 { max-width: $max-section-header-width; }
+  h2 {
+    max-width: $max-section-header-width;
+  }
 }
 
 .brands-logo-container {
@@ -487,25 +539,49 @@ header[role="banner"]{
 
 .brand-logo {
   width: 37.5%;
-  &:nth-child(2n + 1) { padding: 7.5% 7.5% 7.5% 0; }
-  &:nth-child(2n + 2) { padding: 7.5% 0 7.5% 7.5%; }
-  &:last-child { padding: 7.5% 3.75% 7.5% 3.75%; }
+  &:nth-child(2n + 1) {
+    padding: 7.5% 7.5% 7.5% 0;
+  }
+  &:nth-child(2n + 2) {
+    padding: 7.5% 0 7.5% 7.5%;
+  }
+  &:last-child {
+    padding: 7.5% 3.75% 7.5% 3.75%;
+  }
   @media screen and (min-width: $mobile-break) {
     width: 25%;
-    &:nth-child(2n + 1) { padding: 4% 10% 4% 0; }
-    &:nth-child(2n + 2) { padding: 4% 0 4% 10%; }
-    &:last-child { padding: 7.5% 3.75% 7.5% 3.75%; }
+    &:nth-child(2n + 1) {
+      padding: 4% 10% 4% 0;
+    }
+    &:nth-child(2n + 2) {
+      padding: 4% 0 4% 10%;
+    }
+    &:last-child {
+      padding: 7.5% 3.75% 7.5% 3.75%;
+    }
   }
   @media screen and (min-width: $tablet-break) {
-    width: calc(70%/3);
-    &:nth-child(3n + 1) { padding: calc(30% / 4) calc(30% / 4) calc(30% / 4) 0; }
-    &:nth-child(3n + 2) { padding: calc(30% / 4); }
-    &:nth-child(3n + 3) { padding: calc(30% / 4) 0 calc(30% / 4) calc(30% / 4); }
+    width: calc(70% / 3);
+    &:nth-child(3n + 1) {
+      padding: calc(30% / 4) calc(30% / 4) calc(30% / 4) 0;
+    }
+    &:nth-child(3n + 2) {
+      padding: calc(30% / 4);
+    }
+    &:nth-child(3n + 3) {
+      padding: calc(30% / 4) 0 calc(30% / 4) calc(30% / 4);
+    }
   }
   @media screen and (min-width: $hd-break) {
-    &:nth-child(3n + 1) { padding: calc(10% / 4) calc(20% / 4) calc(10% / 4) 0; }
-    &:nth-child(3n + 2) { padding: calc(10% / 4) calc(20% / 4)}
-    &:nth-child(3n + 3) { padding: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4); }
+    &:nth-child(3n + 1) {
+      padding: calc(10% / 4) calc(20% / 4) calc(10% / 4) 0;
+    }
+    &:nth-child(3n + 2) {
+      padding: calc(10% / 4) calc(20% / 4);
+    }
+    &:nth-child(3n + 3) {
+      padding: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4);
+    }
   }
 }
 
@@ -521,7 +597,9 @@ header[role="banner"]{
 
 .location-text-container {
   max-width: $max-section-text-width;
-  h2 { max-width: $max-section-header-width; }
+  h2 {
+    max-width: $max-section-header-width;
+  }
   @media screen and (min-width: $tablet-break) {
     position: relative;
     left: 10vw;
@@ -536,7 +614,9 @@ header[role="banner"]{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  h2 { max-width: $max-section-header-width; }
+  h2 {
+    max-width: $max-section-header-width;
+  }
   @media screen and (min-width: $mobile-break) {
     align-items: flex-end;
   }
@@ -551,9 +631,15 @@ header[role="banner"]{
 
 .partner-logo {
   margin: 1.5em 2em 1.5em 0;
-  &:nth-child(1) { margin-left: 0; }
-  &:nth-child(2) { margin-top: 0; }
-  &:nth-child(3) { margin-top: 0; }
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+  &:nth-child(2) {
+    margin-top: 0;
+  }
+  &:nth-child(3) {
+    margin-top: 0;
+  }
   @media screen and (min-width: $mobile-break) {
     margin: 2em;
   }
@@ -564,7 +650,7 @@ header[role="banner"]{
   height: 400vw;
   margin-top: -10vw;
   overflow: hidden;
-  background-image: url("./images/map-gavle.svg");
+  background-image: url('./images/map-gavle.svg');
   background-repeat: no-repeat;
   background-position: 55% 0%;
   background-size: 450%;
@@ -605,8 +691,8 @@ header[role="banner"]{
   }
 }
 
-footer[role="contentinfo"] {
-  background-image: url("./images/footer-male-bust.jpg");
+footer[role='contentinfo'] {
+  background-image: url('./images/footer-male-bust.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -617,7 +703,6 @@ footer[role="contentinfo"] {
   padding-bottom: $section-gutter / 2;
   @media screen and (min-width: $mobile-break) {
     padding-top: $section-gutter;
-
   }
   @media screen and (min-width: $hd-break) {
     padding-top: $section-gutter / 2;
@@ -646,7 +731,9 @@ footer[role="contentinfo"] {
   height: auto;
   margin-top: $section-gutter;
   margin-bottom: $section-gutter;
-  path { fill: $secondary-color; }
+  path {
+    fill: $secondary-color;
+  }
   @media screen and (min-width: $tablet-break) {
     margin-top: $section-gutter / 2;
     margin-bottom: $section-gutter / 2;
@@ -664,7 +751,9 @@ footer[role="contentinfo"] {
     font-size: 1em;
   }
 
-  hr { margin: 1em 0; }
+  hr {
+    margin: 1em 0;
+  }
 }
 
 #social-media-container {
@@ -690,10 +779,13 @@ footer[role="contentinfo"] {
     flex-direction: row;
   }
 
-  & > *:last-child > p:last-child { margin: 0; }
+  & > *:last-child > p:last-child {
+    margin: 0;
+  }
   @media screen and (min-width: $mobile-break) {
-    & > * > p:last-child { margin: 0; }
-
+    & > * > p:last-child {
+      margin: 0;
+    }
   }
 }
 
@@ -728,5 +820,7 @@ footer[role="contentinfo"] {
   @media screen and (min-width: $mobile-break) {
     font-size: 1em;
   }
-  p { margin: 0; }
+  p {
+    margin: 0;
+  }
 }
