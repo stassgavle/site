@@ -631,8 +631,9 @@ header[role='banner'] {
 
 .partner-logo {
   margin: 1.5em 2em 1.5em 0;
-  max-width: 500px;
-  max-height: 250px;
+  max-width: 300px;
+  max-height: 200px;
+  transform: rotate(-10deg);
   &:nth-child(1) {
     margin-left: 0;
   }
@@ -645,6 +646,10 @@ header[role='banner'] {
   @media screen and (min-width: $mobile-break) {
     margin: 2em;
   }
+}
+
+.partner-logo#flanor {
+  max-height: 150px;
 }
 
 #map {
