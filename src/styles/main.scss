@@ -593,6 +593,12 @@ header[role='banner'] {
 
 #location-content-container {
   @include content-restraints;
+  @media screen and (min-width: $mobile-break) {
+    margin-bottom: 5em;
+  }
+  @media screen and (min-width: $tablet-break) {
+    margin-bottom: 10em;
+  }
 }
 
 .location-text-container {
@@ -612,16 +618,18 @@ header[role='banner'] {
 .location-logos-container {
   max-width: $max-section-text-width;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
   h2 {
     max-width: $max-section-header-width;
   }
   @media screen and (min-width: $mobile-break) {
-    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
   }
   @media screen and (min-width: $tablet-break) {
-    position: relative;
     left: 10vw;
   }
   @media screen and (min-width: $hd-break) {
@@ -630,21 +638,20 @@ header[role='banner'] {
 }
 
 .partner-logo {
-  margin: 1.5em 2em 1.5em 0;
+  width: 75%;
   max-width: 300px;
   max-height: 200px;
+  margin: 1.5em 0;
   transform: rotate(-7deg);
-  &:nth-child(1) {
-    margin-left: 0;
-  }
-  &:nth-child(2) {
-    margin-top: 0;
-  }
-  &:nth-child(3) {
-    margin-top: 0;
-  }
   @media screen and (min-width: $mobile-break) {
-    margin: 2em;
+    width: auto;
+    margin: 1em;
+    &:nth-child(2n + 1) {
+      margin-left: 0;
+    }
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
   }
 }
 
