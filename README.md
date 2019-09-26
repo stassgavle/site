@@ -15,15 +15,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Install
 
-`npm install`
+- `npm install`
 
-### Gulp main tasks
+## Scripts
 
-- `gulp watch`
-  Builds and Serves content at localhost:3000. Watches for changes in /src
+- `npm start`
+  Runs gulp script (defined in ./gulpfile.js) `gulp watch`, using local gulp install; Builds and serves content at `localhost:3000`. Watches for changes in /src
 
-- `gulp build`
-  Builds and packages to /dist for deployment
+- `npm run build`
+  Runs gulp script (defined in ./gulpfile.js) `gulp build`, using local gulp install; Builds and packages project for deployment in /dist
 
 ## Deployment
 
