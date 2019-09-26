@@ -537,9 +537,12 @@ header[role='banner'] {
   }
 }
 
-.brand-logo {
+.brand-logo-container {
   width: 37.5%;
   display: inline-block;
+  position: relative;
+  top: 0;
+
   &:nth-child(2n + 1) {
     margin: 7.5% 7.5% 7.5% 0;
   }
@@ -584,9 +587,26 @@ header[role='banner'] {
       margin: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4);
     }
   }
-  img {
+  &:hover .brand-logo {
+    top: -0.4em;
+  }
+  .brand-logo {
+    position: relative;
+    transition: all ease 0.2s;
+    top: 0;
     width: 100%;
   }
+}
+
+#polo-ralph-lauren {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#peak-performance,
+#gant {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 #location {
