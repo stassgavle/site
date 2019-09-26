@@ -22,7 +22,8 @@
   "scripts": {
     "gulp:watch": "gulp watch",
     "gulp:build": "gulp build",
-    "start": "npm run gulp:watch"
+    "start": "npm run gulp:watch",
+    "build": "npm run gulp:build"
   },
   "author": "Robin Andersson",
   "license": "ISC",
