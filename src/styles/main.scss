@@ -539,49 +539,53 @@ header[role='banner'] {
 
 .brand-logo {
   width: 37.5%;
+  display: inline-block;
   &:nth-child(2n + 1) {
-    padding: 7.5% 7.5% 7.5% 0;
+    margin: 7.5% 7.5% 7.5% 0;
   }
   &:nth-child(2n + 2) {
-    padding: 7.5% 0 7.5% 7.5%;
+    margin: 7.5% 0 7.5% 7.5%;
   }
   &:last-child {
-    padding: 7.5% 3.75% 7.5% 3.75%;
+    margin: 7.5% 3.75% 7.5% 3.75%;
   }
   @media screen and (min-width: $mobile-break) {
     width: 25%;
     &:nth-child(2n + 1) {
-      padding: 4% 10% 4% 0;
+      margin: 4% 10% 4% 0;
     }
     &:nth-child(2n + 2) {
-      padding: 4% 0 4% 10%;
+      margin: 4% 0 4% 10%;
     }
     &:last-child {
-      padding: 7.5% 3.75% 7.5% 3.75%;
+      margin: 7.5% 3.75% 7.5% 3.75%;
     }
   }
   @media screen and (min-width: $tablet-break) {
     width: calc(70% / 3);
     &:nth-child(3n + 1) {
-      padding: calc(30% / 4) calc(30% / 4) calc(30% / 4) 0;
+      margin: calc(30% / 4) calc(30% / 4) calc(30% / 4) 0;
     }
     &:nth-child(3n + 2) {
-      padding: calc(30% / 4);
+      margin: calc(30% / 4);
     }
     &:nth-child(3n + 3) {
-      padding: calc(30% / 4) 0 calc(30% / 4) calc(30% / 4);
+      margin: calc(30% / 4) 0 calc(30% / 4) calc(30% / 4);
     }
   }
   @media screen and (min-width: $hd-break) {
     &:nth-child(3n + 1) {
-      padding: calc(10% / 4) calc(20% / 4) calc(10% / 4) 0;
+      margin: calc(10% / 4) calc(20% / 4) calc(10% / 4) 0;
     }
     &:nth-child(3n + 2) {
-      padding: calc(10% / 4) calc(20% / 4);
+      margin: calc(10% / 4) calc(20% / 4);
     }
     &:nth-child(3n + 3) {
-      padding: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4);
+      margin: calc(10% / 4) 0 calc(10% / 4) calc(20% / 4);
     }
+  }
+  img {
+    width: 100%;
   }
 }
 
