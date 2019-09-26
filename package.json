@@ -20,7 +20,9 @@
     "gulp-webserver": "^0.9.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp:watch": "gulp watch",
+    "gulp:build": "gulp build",
+    "start": "npm run gulp:watch"
   },
   "author": "Robin Andersson",
   "license": "ISC",
