@@ -37,7 +37,10 @@ To deploy:
 4. (make changes to src, commit to master, etc.)
 5. `gulp build` (build and package for production)
 6. navigate to `/dist` (make sure the branch changes to gh-pages when in /dist)
-7. git add, commit and push to `gh-pages` branch: 7.`git add .`, `git commit`, `git push origin gh-pages`
+7. git add, commit and push to `gh-pages` branch:
+   1. `git add .`
+   2. `git commit`
+   3. `git push origin gh-pages`
 
 ### Useful commands
 
